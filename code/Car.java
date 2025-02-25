@@ -108,8 +108,8 @@ public class Car{
 
     @Override
     public String toString() {
-        return "Car [id=" + id + ", company=" + company + ", model=" + model + ", seater=" + seater + ", fuelType="
-                + fuelType + ", type=" + type + ", price=" + price + ", sold=" + sold + "]";
+        return "Car [id=" + id + ", company=" + company.getName() + ", model=" + model + ", seater=" + seater + ", fuelType="
+                + fuelType.getName() + ", type=" + type.getName() + ", price=" + price + ", sold=" + sold + "]";
     }
 
     

@@ -83,16 +83,16 @@ public class DatabaseOperations {
             rs.setCommand("select * from car limit 1");
             rs.execute();
             rs.moveToInsertRow();
-            rs.setString("company", car.getCompany().getName());
-            rs.setInt("model", car.getModel());
-            rs.setInt("seater", car.getSeater());
-            rs.setString("fuel_type", car.getFuelType().getName());
-            rs.setString("type", car.getType().getName());
-            rs.setDouble("price", car.getPrice());
-            rs.setBoolean("sold", car.isSold());
+            rs.updateString(2, car.getCompany().getName());
+            rs.updateInt(3, car.getModel());
+            rs.updateInt(4, car.getSeater());
+            rs.updateString(5, car.getFuelType().getName());
+            rs.updateString(6, car.getType().getName());
+            rs.updateDouble(7, car.getPrice());
+            rs.updateBoolean(8, car.isSold());
             rs.insertRow();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 

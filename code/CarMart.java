@@ -30,6 +30,7 @@ public class CarMart {
                     cs.soldCar();
                     break;
                 case 5:
+                    cs.closeConnection();
                     System.out.println("Exiting...");
                     break;
                 default:

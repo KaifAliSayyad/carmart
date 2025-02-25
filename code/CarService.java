@@ -148,9 +148,7 @@ public class CarService{
             case 1:
                 List<Car> cars = DatabaseOperations.getCars();
                 for(Car car : cars){
-                    if(car.isSold()){
-                        System.out.println(car);
-                    }
+                    System.out.println(car);
                 }
                 break;
             case 2:
@@ -173,7 +171,9 @@ public class CarService{
         }
     }
 
-    
+    public void closeConnection(){
+        DatabaseOperations.closeConnection();
+    }
 }
 
 // private int id;     // id serial primary key,
